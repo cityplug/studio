@@ -2,17 +2,24 @@
 
 echo
 sudo docker-compose up -d
-docker ps
+docker ps -a
 
 echo "
 net.ipv4.ip_forward = 1
 net.ipv6.conf.all.forwarding = 1" >> /etc/sysctl.conf
 sysctl -p
 
-echo "# --- Enter pihole user password --- #"
-docker exec -it pihole pihole -a -p
+# --- Aliases
+echo "# --- Creating bash_aliases --- #"
+
+echo "
+alias run-sand='docker run -it ubuntu'
+" >> ~/.bash_aliases
+
+#docker exec -it ubuntu
+
 echo "#  ---  COMPLETED | REBOOT SYSTEM  ---  #"
-exit
+reboot
 
 
 

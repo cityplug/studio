@@ -9,7 +9,7 @@ services:
       PGID: 0
       API_KEY: ktez6xlMnDf0yaD5xGuUjgI-PV95A2Dn3tohz6wV
       ZONE: cityplug.co.uk
-      SUBDOMAIN: home.cityplug.co.uk
+      SUBDOMAIN: dev.cityplug.co.uk
 
   portainer:
     container_name: portainer_agent
@@ -23,3 +23,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /var/lib/docker/volumes:/var/lib/docker/volumes
       - /relay/.AppData/portainer:/data
+    
+  ubuntu:
+    build: .
+    container_name: ubuntu
+    restart: always
