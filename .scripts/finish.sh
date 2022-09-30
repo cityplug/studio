@@ -14,7 +14,7 @@ echo "# --- Creating bash_aliases --- #"
 
 echo "
 alias run-sand='docker run -it ubuntu'
-" >> ~/.bash_aliases
+" >> /home/shay/.bash_aliases
 
 #docker exec -it ubuntu
 

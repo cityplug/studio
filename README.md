@@ -17,10 +17,10 @@
 #### PasswordAuthentication “no”
     reboot
 --------------------------------------------------------------------------------
+### Run the following scripts
     sudo su
     cd /opt && apt install git -y && git clone https://github.com/cityplug/studio && chmod +x studio/.scripts/*
 ------------------------------------------------------------------------------
-### Run the following scripts
     cd studio/.scripts/ && ./start.sh
     sudo su
     cd /opt/studio/.scripts/ && ./finish.sh
