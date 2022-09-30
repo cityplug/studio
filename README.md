@@ -18,16 +18,11 @@
     reboot
 --------------------------------------------------------------------------------
     sudo su
-    cd /opt
-    apt install git -y && git clone https://github.com/cityplug/relay && chmod +x relay/.scripts/*
+    cd /opt && apt install git -y && git clone https://github.com/cityplug/studio && chmod +x studio/.scripts/*
 ------------------------------------------------------------------------------
 ### Run the following scripts
-    cd relay/.scripts/ && ./start.sh
+    cd studio/.scripts/ && ./start.sh
     sudo su
-    cd /opt/relay/.scripts/ && ./security-samba.sh
+    cd /opt/studio/.scripts/ && ./finish.sh
 --------------------------------------------------------------------------------
-    echo "
-    interface eth0
-    static ip_address=192.168.50.254/24
-    static routers=192.168.50.1" >> /etc/dhcpcd.conf
-------------------------------------------------------------------------------
+
