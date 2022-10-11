@@ -13,7 +13,7 @@ sysctl -p
 echo "# --- Creating bash_aliases --- #"
 
 echo "
-alias run-sand='docker run -it ubuntu'
+alias start-busybox='docker run -it ubuntu'
 " >> /home/shay/.bash_aliases
 
 #docker exec -it ubuntu
