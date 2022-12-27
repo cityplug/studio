@@ -12,6 +12,16 @@ services:
       SUBDOMAIN: dev.cityplug.co.uk
 
   portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:latest
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /relay/.AppData/portainer/data:/data
+    ports:
+      - 9000:9000
+
+  portainer:
     container_name: portainer_agent
     image: portainer/agent:2.11.1
     restart: always
